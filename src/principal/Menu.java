@@ -87,7 +87,8 @@ public class Menu {
 	private static void modificarNombreDeUnaPersona() {
 		Scanner entrada = new Scanner(System.in);
 		System.out.println("Introduce el nuevo nombre");
-		listarYSeleccionarPersona().setNombre(entrada.nextLine());
+		String nuevoNombre = entrada.nextLine();
+		listarYSeleccionarPersona().setNombre(nuevoNombre);
 	}
 	
 	private static void calcularIMC() {
@@ -119,7 +120,6 @@ public class Menu {
 					linea += (char)caracter;
 				}
 				else {
-					System.out.println(linea);
 					contador++;
 					String [] listaDatos = linea.split(",");
 					listaPersonas.add(new Persona(listaDatos[0], Integer.parseInt(listaDatos[1]), listaDatos[2].charAt(0), Double.parseDouble(listaDatos[3]), Double.parseDouble(listaDatos[4])));
