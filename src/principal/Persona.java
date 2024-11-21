@@ -35,7 +35,6 @@ public class Persona {
 		dni = generaDNI();
 	}
 
-
 	public int calcularIMC() {
 		double imc = this.peso / altura * altura;
 		
